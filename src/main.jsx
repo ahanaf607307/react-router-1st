@@ -1,0 +1,25 @@
+import React from 'react'; 
+import { createRoot } from 'react-dom/client'
+import './index.css'
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello world!</div>,
+  },
+  {
+    path:"/about",
+    element : <div> <h1>HI , I'm in the about Page</h1> </div>
+  }
+]);
+
+createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)
